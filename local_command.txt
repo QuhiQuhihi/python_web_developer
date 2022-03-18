@@ -1,0 +1,14 @@
+sudu-apt install python3-virtualenv
+virtualenv fc_django_venv
+
+django-admin startproject fc_community
+cd fc_community
+django-admin startapp board
+django-admin startapp fcuser
+
+
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py runserver
+
