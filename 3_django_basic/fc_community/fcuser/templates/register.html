@@ -25,32 +25,42 @@
                 </div>
             </div>
             <div class="row mt-5">
-                <div ckass="col-12">
+                <div class="col-12">
                     <form method="POST" action=".">
                         {% csrf_token %}
                         <div class="form-group">
-                          <label for="username">사용자 이름</label>
-                          <input 
-                          type="text" 
-                          class="form-control" 
-                          id="username"  
-                          placeholder="사용자 이름"
-                          naem="username"
-                          />
+                            <label for="username">사용자 이름</label>
+                            <input 
+                            type="text" 
+                            class="form-control" 
+                            id="username"  
+                            placeholder="사용자 이름"
+                            name="username"
+                            />
                         <small id="emailHelp" class="form-text text-muted">We'll never share your information with anyone else.</small>
                         </div>
                         <div class="form-group">
-                          <label for="password">비밀번호</label>
-                          <input 
-                          type="password" 
-                          class="form-control" 
-                          id="password" 
-                          placeholder="비밀번호"
-                          name="password"
-                          />
+                            <label for="useremail">사용자 이메일</label>
+                            <input
+                            type="email" 
+                            class="form-control"
+                            id="useremail"
+                            placeholder="사용자 이메일"
+                            name="useremail" 
+                             />
                         </div>
                         <div class="form-group">
-                            <label for="password">비밀번호 확인</label>
+                            <label for="password">비밀번호</label>
+                            <input 
+                            type="password" 
+                            class="form-control" 
+                            id="password" 
+                            placeholder="비밀번호"
+                            name="password"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="re-password">비밀번호 확인</label>
                             <input 
                             type="password" 
                             class="form-control" 
@@ -58,10 +68,6 @@
                             placeholder="비밀번호 확인"
                             name="re-password"
                             />
-                        </div>
-                        <div class="form-group form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
                         </div>
                         <button type="submit" class="btn btn-primary">등록</button>
                     </form>
