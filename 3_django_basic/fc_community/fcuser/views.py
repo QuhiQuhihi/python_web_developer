@@ -1,9 +1,18 @@
+from cgitb import html
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.hashers import make_password, check_password
 
 from .models import Fcuser
 # Create your views here.
+
+def login(request):
+
+    if request.methods == 'GET':
+        return render(request, 'login.html')
+
+    return render(request, 'login.html')
+
 
 def register(request):
     if request.method == 'GET':
@@ -28,3 +37,4 @@ def register(request):
             fcuser.save()
         
         return render(request, 'register.html', res_data)
+
